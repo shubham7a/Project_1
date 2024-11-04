@@ -1,6 +1,5 @@
 import './App.css';
 import React from 'react';
-import EmbeddedSignup from './components/EmbeddedSignup';
 
 
 
@@ -9,7 +8,7 @@ function App() {
     <>
     <div >
       
-       <EmbeddedSignup/>
+   
     </div>
   </>
   );
