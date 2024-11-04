@@ -68,7 +68,7 @@
   
     const launchWhatsAppSignup = () => {
       window.FB.login(fbLoginCallback, {
-        config_id: '1907247449785013', // configuration ID
+        config_id: '778267790925508', // configuration ID
         response_type: 'code',
         override_default_response_type: true,
         extras: {
