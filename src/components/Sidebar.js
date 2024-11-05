@@ -28,8 +28,8 @@ const Sidebar = ({ setCurrentChat }) => {
 
         <div className="space-y-2">
           {/* Display the user's name dynamically */}
-          <button onClick={() => setCurrentChat(user.email)} className="block w-full p-2 text-left rounded hover:bg-gray-700">
-            {user ? user.email : 'Contact 1'}
+          <button onClick={() => setCurrentChat(user.PhoneNumber)} className="block w-full p-2 text-left rounded hover:bg-gray-700">
+            {user ? user.PhoneNumber : 'Contact 1'}
           </button>
           <button onClick={() => setCurrentChat('chat2')} className="block w-full p-2 text-left rounded hover:bg-gray-700">
             Contact 2
