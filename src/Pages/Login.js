@@ -1,16 +1,16 @@
-import React, { useState } from 'react';
-import { useDispatch } from 'react-redux';
-import {login} from '../redux/Slices/AuthSlice';
-import { useNavigate } from 'react-router-dom';
+import React, { useState } from "react";
+import { useDispatch } from "react-redux";
+import { login } from "../redux/Slices/AuthSlice";
+import { useNavigate } from "react-router-dom";
 
 const Login = () => {
-  const [PhoneNumber, setPhoneNumber] = useState('');
+  const [PhoneNumber, setPhoneNumber] = useState("");
   const dispatch = useDispatch();
   const navigate = useNavigate();
 
   const handleLogin = () => {
     dispatch(login({ PhoneNumber }));
-    navigate('/chat');
+    navigate("/chat");
   };
 
   return (
@@ -23,7 +23,10 @@ const Login = () => {
         placeholder="Enter your Phone Number"
         className="p-2 border border-gray-300 rounded mb-4"
       />
-      <button onClick={handleLogin} className="bg-blue-500 text-white px-4 py-2 rounded">
+      <button
+        onClick={handleLogin}
+        className="bg-blue-500 text-white px-4 py-2 rounded"
+      >
         Login
       </button>
     </div>
