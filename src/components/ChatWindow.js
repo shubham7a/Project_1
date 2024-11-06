@@ -2,11 +2,14 @@ import React, { useState } from "react";
 import ChatHeader from "./ChatHeader";
 import EmojiPicker from "emoji-picker-react";
 import axios from "axios";
+import { useSelector } from "react-redux";
 
 const ChatWindow = ({ currentChat }) => {
   const [messages, setMessages] = useState([]);
   const [newMessage, setNewMessage] = useState("");
   const [showEmojiPicker, setShowEmojiPicker] = useState(false);
+  const user = useSelector((state) => state.auth.user);
+
 
   const sendMessage = async() => {
     if (newMessage.trim()) {
@@ -16,6 +19,7 @@ const ChatWindow = ({ currentChat }) => {
     try {
       const response = await axios.post("https://ordinary-marsh-spy.glitch.me/webhook", {
         message: newMessage,
+        user,
       });
   } catch (error) {
       console.error("Error sending message:", error);
