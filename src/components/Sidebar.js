@@ -34,12 +34,12 @@ const Sidebar = ({ setCurrentChat }) => {
           >
             {user ? user.PhoneNumber : "Contact 1"}
           </button>
-          <button
+          {/* <button
             onClick={() => setCurrentChat("chat2")}
             className="block w-full p-2 text-left rounded hover:bg-gray-700"
           >
             Contact 2
-          </button>
+          </button> */}
         </div>
       </div>
 
